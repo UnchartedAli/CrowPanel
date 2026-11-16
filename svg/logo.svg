@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-labelledby="t d">
+  <title id="t">Crow logo</title>
+  <desc id="d">Crow (کلاغ) black and red crow silhouette with wordmark.</desc>
+  <g transform="translate(0,0)">
+    <path fill="#e11d2e" d="M22 92C20 70 34 50 56 44C60 34 64 26 74 22C80 20 84 24 84 30V34L102 42L84 48C84 56 80 60 76 64C82 76 76 92 62 100C52 106 40 104 34 98L18 110L24 94Z"/>
+    <circle cx="76" cy="33" r="3" fill="#050505"/>
+  </g>
+  <text x="130" y="74" fill="#f5f5f5" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="8">CROW</text>
+</svg>

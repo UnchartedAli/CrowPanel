@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   CROW PANEL — Micro utilities
+   ONLY overrides specific to components that need extra specificity.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ═══ ECH picker specificity overrides ════════════════════════════ */
+#mod-ech-picker.modal {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+#mod-ech-picker .ech-picker-modal {
+  background: rgba(18,20,26,.84) !important;
+  border-color: rgba(255,255,255,.18) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,.42) !important;
+}
+#mod-ech-picker .ech-preset-option {
+  background: rgba(255,255,255,.055);
+  border-color: rgba(255,255,255,.14);
+}
+#mod-ech-picker .ech-preset-option.selected {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.6);
+}
+[data-theme="light"] #mod-ech-picker .ech-picker-modal {
+  background: rgba(255,255,255,.84) !important;
+  border-color: rgba(0,0,0,.16) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,.14) !important;
+}
+[data-theme="light"] #mod-ech-picker .ech-preset-option {
+  background: rgba(0,0,0,.025);
+  border-color: rgba(0,0,0,.12);
+}
+[data-theme="light"] #mod-ech-picker .ech-preset-option.selected {
+  background: rgba(0,0,0,.07);
+  border-color: #000;
+}
+
+/* ═══ Proxy card: expanded state styling ═════════════════════════ */
+.px-card .px-body { display: block; }
+
+/* ═══ Modals z-index safety ══════════════════════════════════════ */
+.modal.show { z-index: 200; }
+
+/* ═══ Sidebar on mobile: ensure visible toggle ═══════════════════ */
+@media (max-width: 900px) {
+  .sidebar.open { z-index: 100; }
+  .sidebar-backdrop.show { z-index: 99; }
+}
+
+/* ═══ Make sure .hidden works everywhere ═════════════════════════ */
+.hidden { display: none !important; }
+
+/* ═══ Small helper: page-fit for long forms ═════════════════════ */
+@media (max-width: 400px) {
+  .login-card { padding: 28px 20px 24px; }
+  .login-title { font-size: 20px; letter-spacing: 3px; }
+  .topbar-greet { font-size: 12px; }
+}
+/* ═══ CROW — clean black & red polish ═════════════════════════════ */
+.login-wrap::before, .login-wrap::after { display: none; }
+.crow-credit { font-size: 11px; color: #8a8a8a; margin-top: 4px; direction: ltr; line-height: 1.5; }
+.crow-credit a { color: #e11d2e; text-decoration: none; }
+.crow-credit a:hover { text-decoration: underline; }
+
+/* ═══ CROW — pure black base, rectangular chips, red outlines ═════ */
+:root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+  --bg-0:#000000; --bg-1:#000000; --bg-2:#000000; --bg-3:#000000;
+  --surface:#000000; --surface-2:#050505; --surface-hover:#0a0a0a;
+  --surface-glass:#000000; --glass:#000000; --bg:#000000;
+  --r-xs:0px; --r-sm:0px; --r-md:0px; --r-full:0px; --radius:0px;
+  --line:#e11d2e;
+}
+html, body { background:#000000 !important; }
+.btn, .btn-p, .btn-g, .btn-r, .btn-b, .btn-gr, .btn-glass, .btn-sm, .btn-icon,
+[class*="chip"], .badge, .tag, .pill {
+  background:#000000 !important; color:#ff4655 !important;
+  border:1px solid #e11d2e !important; border-radius:0 !important; box-shadow:none !important;
+}
+.btn:hover, .btn-p:hover, .btn-g:hover, .btn-r:hover, .btn-b:hover, .btn-gr:hover, .btn-glass:hover,
+[class*="chip"]:hover {
+  background:#e11d2e !important; color:#ffffff !important; border-color:#ff4655 !important;
+}
